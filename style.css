@@ -1,0 +1,79 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+    font-family: "Lora", serif;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+}
+
+div.wrapper{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display:flex;
+}
+
+div.wrapper aside{
+    width:20vw;
+    min-width: 200px;
+}
+
+main.leaflet-container {
+    height: 100%;
+    width: 100%;
+}
+
+
+#loader-screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: #F9F4ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s linear;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  #loader-screen h1 {
+    text-shadow: -3px 4px 7px rgba(81, 67, 21, 0.8);
+    font-family: "RingBearer", serif;
+    font-size: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  
+aside{
+    overflow-y: scroll;
+}
+aside ul li{
+    min-height: 300px;
+    padding:20px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px gray;
+}
+
+aside ul li p{
+    font-size: 0.7rem;
+    text-align:center;
+}
+
+  /* Default icon URLs */
+.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+    background-image: url(/assets/images/marker-icon.png) !important;
+}
